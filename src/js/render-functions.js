@@ -11,13 +11,24 @@ export const imagesCardTemplate = hits =>
                 loading="lazy"
               />
               <div class="info">
-                <p class="info-item"><b>Likes:</b> ${image.likes}</p>
-                <p class="info-item"><b>Views:</b> ${image.views}</p>
-                <p class="info-item"><b>Comments:</b> ${image.comments}</p>
-                <p class="info-item"><b>Downloads:</b> ${image.downloads}</p>
-              </div>
+  <div class="info-list">
+    <span class="info-item">Likes</span>
+    <span class="info-item-value">${image.likes}</span>
+  </div>
+  <div class="info-list">
+    <span class="info-item">Views</span>
+    <span class="info-item-value">${image.views}</span>
+  </div>
+  <div class="info-list">
+    <span class="info-item">Comments</span>
+    <span class="info-item-value">${image.comments}</span>
+  </div>
+  <div class="info-list">
+    <span class="info-item">Downloads</span>
+    <span class="info-item-value">${image.downloads}</span>
+  </div>
+</div>
             </a>
           </li>`
     )
     .join('');
-// export const imagesMarkup = imagesCardTemplate(data.hits);

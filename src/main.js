@@ -44,7 +44,10 @@ searchForm.addEventListener('submit', event => {
         });
         return;
       }
-      imagesListEl.insertAdjacentHTML('beforeend', imagesCardTemplate);
+      imagesListEl.insertAdjacentHTML(
+        'beforeend',
+        imagesCardTemplate(data.hits)
+      );
       lightbox.refresh(); // Оновити SimpleLightbox
     })
     .catch(error => {
@@ -56,3 +59,5 @@ searchForm.addEventListener('submit', event => {
       console.error('Error fetching data:', error);
     });
 });
+
+// imagesListEl.insertAdjacentHTML('beforeend', imagesCardTemplate());
